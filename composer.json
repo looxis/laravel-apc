@@ -1,23 +1,25 @@
 {
-    "name": "looxis/laravel-scopevisio",
-    "description": "Connect your laravel application to the ScopeVIsio platform",
+    "name": "looxis/laravel-apc-client",
+    "description": "Connect your laravel application to the Awesome Product Configurator platform",
     "keywords": [
         "looxis",
-        "laravel-scopevisio"
+        "laravel-apc-client"
     ],
-    "homepage": "https://github.com/looxis/laravel-scopevisio",
+    "homepage": "https://github.com/looxis/laravel-apc-client",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
-            "name": "Igor Tsapiro",
+            "name": "Mitch Cholovskyy",
             "email": "dev@looxis.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^7.1",
-        "illuminate/support": "5.8.*"
+        "guzzlehttp/guzzle": "^6.3",
+        "illuminate/support": "5.8.*",
+        "ext-json": "*"
     },
     "require-dev": {
         "orchestra/testbench": "^3.8",
@@ -25,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Looxis\\Laravel\\ScopeVisio\\": "src"
+            "Looxis\\Laravel\\APC\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Looxis\\Laravel\\ScopeVisio\\Tests\\": "tests"
+            "Looxis\\Laravel\\APC\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -43,10 +45,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Looxis\\Laravel\\ScopeVisio\\ScopeVisioServiceProvider"
+                "Looxis\\Laravel\\APC\\APCServiceProvider"
             ],
             "aliases": {
-                "ScopeVisio": "Looxis\\Laravel\\ScopeVisio\\ScopeVisioFacade"
+                "APC": "Looxis\\Laravel\\APC\\APCFacade"
             }
         }
     }

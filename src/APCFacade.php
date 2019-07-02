@@ -1,13 +1,10 @@
 <?php
 
-namespace Looxis\Laravel\ScopeVisio;
+namespace Looxis\Laravel\APC;
 
 use Illuminate\Support\Facades\Facade;
 
-/**
- * @see \Looxis\Laravel\ScopeVisio\Skeleton\SkeletonClass
- */
-class ScopeVisioFacade extends Facade
+class APCFacade extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -16,6 +13,6 @@ class ScopeVisioFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'scopevisio';
+        return 'laravel-apc';
     }
 }
