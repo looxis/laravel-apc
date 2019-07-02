@@ -32,7 +32,6 @@ class LaravelAPCTest extends TestCase
     /** @test */
     public function test_apc_constructor()
     {
-        $a = app('APC');
         $this->assertEquals(APC::class, get_class(app('APC')));
     }
 }
